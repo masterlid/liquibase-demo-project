@@ -1,0 +1,20 @@
+databaseChangeLog:
+    - changeSet:
+        id: create-tables
+        author: Master Lid
+        changes:
+            - createTable:
+                tableName: goods
+                columns:
+                    - column:
+                        name: id
+                        type: bigint
+                        autoIncrement: true
+                        constraints:
+                            primaryKey: true
+                            nullable: false
+                    - column:
+                        name: caption
+                        type: varchar(100)
+                        constraints:
+                            nullable: false

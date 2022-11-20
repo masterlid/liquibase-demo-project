@@ -1,0 +1,45 @@
+server:
+    address: localhost
+    port: 8088
+    servlet:
+        context-path: /
+
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:file:./data/liquibase-demo-project
+        username: sb
+        password: sb123123
+        initialize: true
+        initialization-mode: always
+        sql-script-encoding: UTF-8
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: none
+    liquibase:
+        enabled: true
+    h2:
+        console:
+            enabled: true
+
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+            force-request: true
+            force-response: true
+
+    resources:
+        chain:
+            cache: false
+
+#    main:
+#        banner-mode: off
+
+#logging:
+#    level:
+#        org:
+#            springframework: OFF
+#        root: OFF
